@@ -11,3 +11,9 @@ export function fetch({ page }) {
   // return request(`/api/users?_page=${page}&_limit=5`);
   return request(`/api/users?_page=${page}&_limit=${PAGE_SIZE}`);
 }
+
+export function remove({id}) {
+  return request(`/api/users/${id}`, {
+    method: 'DELETE',
+  });
+}
